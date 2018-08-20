@@ -106,9 +106,10 @@ articleView.create = () => {
   article.category = $('#category').val()
   article.authorUrl = $('#authorUrl').val()
   article.body = $('#body').val()
+  article.publishedOn = $('#published').prop('checked') ? new Date() : null;
+  //? : syntax allows for toggling between published (with a date) and not
 
   let post = new Article(article);
-  console.log(post);
 
   // TODO: Use our interface to the Handblebars template to put this new article into the DOM:
 
